@@ -1,0 +1,78 @@
+.WebWindow {
+  background: var(--dark-900);
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.WebWindow__buttons {
+  width: 8px;
+  height: 8px;
+  margin-right: 0.2rem;
+  border-radius: 40px;
+  display: inline-block;
+}
+
+.WebWindow__buttons.red {
+  background: var(--red);
+}
+
+.WebWindow__buttons.yellow {
+  background: var(--yellow);
+}
+
+.WebWindow__buttons.green {
+  background: var(--green);
+}
+
+.WebWindow__top {
+  padding: 1rem;
+  border-bottom: 1px solid var(--dark-800);
+}
+
+.WebWindow__bar {
+  padding: 1rem 2rem;
+}
+
+.WebWindow__bar p {
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.WebWindow__body {
+  width: 100%;
+  background: var(--white);
+  padding: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.WebWindow__body .message {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.WebWindow__body .block-text {
+  background: var(--gray-200);
+  margin-bottom: 0.5rem;
+  border-radius: 9px;
+}
+
+.WebWindow__body .block-text.small {
+  width: 150px;
+  height: 15px;
+}
+
+.WebWindow__body .block-text.normal {
+  width: 100%;
+  max-width: 600px;
+  height: 15px;
+}
+
+.WebWindow__body .block-text.large {
+  width: 100%;
+  max-width: 600px;
+  height: 45px;
+}

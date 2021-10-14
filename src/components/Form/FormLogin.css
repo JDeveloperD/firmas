@@ -1,0 +1,99 @@
+.FormLogin {
+  width: 100%;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FormLogin .Button {
+  background: var(--green);
+  width: 100%;
+  max-width: 350px;
+}
+
+.FormLogin__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+}
+
+.FormLogin__forgot_password {
+  width: 100%;
+  max-width: 350px;
+  text-align: right;
+}
+
+.FormLogin__forgot_password a {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.InputGroupIcon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+}
+
+.InputGroupIcon__icon {
+  margin-right: 0.5rem;
+  position: absolute;
+  top: 1rem;
+  color: var(--gray-600);
+}
+
+.InputGroupIcon__placeholder {
+  position: absolute;
+  top: 1rem;
+  left: 24px;
+  color: var(--gray-600);
+  font-size: 14px;
+}
+
+.InputGroupIcon__input {
+  border: 0;
+  width: 100%;
+  border-radius: 0;
+  padding: 1rem 0 1rem 1.5rem;
+  border-bottom: 2px solid var(--gray-200);
+}
+
+.InputGroupIcon__error {
+  width: 100%;
+  color: var(--red);
+  margin-top: 0.5rem;
+}
+
+.InputGroupIcon__input.active {
+  border-bottom-color: var(--green);
+}
+
+.InputGroupIcon__input:focus {
+  outline: none;
+}
+
+.InputGroupIcon__input:focus ~ .InputGroupIcon__icon,
+.InputGroupIcon__input.active ~ .InputGroupIcon__icon {
+  color: var(--green);
+}
+
+.InputGroupIcon__input:focus + .InputGroupIcon__placeholder,
+.InputGroupIcon__input.active + .InputGroupIcon__placeholder {
+  top: -10px;
+  color: var(--green);
+  font-size: 12px;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.InputGroupIcon__input.error {
+  border-bottom-color: var(--red);
+}
+
+.InputGroupIcon__input.error + .InputGroupIcon__placeholder {
+  color: var(--red);
+}

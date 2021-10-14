@@ -1,0 +1,41 @@
+.Tooltip {
+  background: var(--green);
+  width: 16px;
+  height: 16px;
+  font-size: 13px;
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  text-align: center;
+}
+
+.Tooltip:hover .text {
+  transform: translateX(0) scale(1);
+}
+
+.Tooltip .text {
+  position: absolute;
+  right: 24px;
+  bottom: -8px;
+  width: 200px;
+  font-size: 12px;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background: rgba(255,255,255, 0.7);
+  color: var(--black);
+  transform: translateX(50%) scale(0);
+  transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.Tooltip .text::before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: -16px;
+  bottom: 8px;
+  border-left: 8px solid rgba(255,255,255, 0.7);
+  border-right: 8px solid transparent;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}

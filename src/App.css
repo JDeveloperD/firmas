@@ -1,0 +1,93 @@
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --green: #00bda5;
+  --yellow: #f5c26b;
+  --red: #f2545b;
+  --purlple: #560DD0;
+  --orange: #FFAA00;
+  --dark-900: #33475b;
+  --dark-800: #425b76;
+  --gray-100: #F6F6F7;
+  --gray-200: #DCDAE0;
+  --gray-300: #D0CCD4;
+  --gray-400: #C3BEC9;
+  --gray-500: #B6B0BD;
+  --gray-600: #A9A2B1;
+  --gradient: linear-gradient(-45deg, #6a78d1, #00a4bd);
+  --font-family-base: 'Arial';
+}
+
+* {
+  box-sizing: border-box;
+  /* transition-duration: 0.3s; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-base);
+}
+
+.App {
+  background: var(--gradient);
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+.col-one {
+  width: 100%;
+}
+
+.col-two {
+  width: 100%;
+}
+
+.main {
+  height: calc(100vh - 70px);
+  padding: 1rem;
+  overflow-y: scroll;
+}
+
+/* .main::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+}
+
+.main::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: #eee;
+} */
+
+.logo {
+  width: 150px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+@media (min-width:992px) {
+  .wrapper {
+    display: flex;
+  }
+
+  .col-one {
+    width: 300px;
+  }
+
+  .col-two {
+    width: calc(100% - 300px);
+  }
+
+  .main {
+    height: 100vh;
+  }
+}

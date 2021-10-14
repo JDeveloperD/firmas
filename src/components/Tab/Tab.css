@@ -1,0 +1,99 @@
+.Tab {
+  position: relative;
+  z-index: 90;
+  width: 100%;
+}
+
+.Tab__list,
+.Tab__wrapper {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Tab__list {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  gap: 0 1px;
+  background: var(--dark-800);
+}
+
+.Tab__title {
+  margin-bottom: 3rem;
+}
+
+.Tab__item {
+  width: 25%;
+  height: 70px;
+  padding: 1.5rem;
+  background: var(--dark-800);
+  cursor: pointer;
+  color: var(--white);
+  text-align: center;
+}
+
+.Tab__item:hover,
+.Tab__item.active {
+  background-color: var(--dark-900);
+}
+
+.Tab__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.Tab__wrapper {
+  background: var(--dark-900);
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: -100vh;
+  border-radius: 400px;
+  opacity: 0;
+  transition: 0.5s cubic-bezier(0.47, 0, 0.745, 0.715);
+  overflow: hidden;
+}
+
+.Tab__wrapper.active {
+  top: 70px;
+  border-radius: 0;
+  height: calc(100vh - 70px);
+  opacity: 1;
+}
+
+.Tab__content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 3.5rem 2rem;
+  overflow-y: scroll;
+}
+
+/* .Tab__content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.Tab__content::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: var(--dark-800);
+} */
+
+@media (min-width: 992px) {
+  .Tab__list {
+    z-index: 0;
+  }
+
+  .Tab__wrapper {
+    z-index: 0;
+    top: 70px;
+    border-radius: 0;
+    height: calc(100vh - 70px);
+    opacity: 1;
+    transition: none;
+  }
+}

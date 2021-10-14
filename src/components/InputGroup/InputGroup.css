@@ -1,0 +1,45 @@
+.InputGroup {
+  border-bottom: 1px solid var(--white);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  margin-bottom: 4rem;
+}
+
+.InputGroup:last-child {
+  margin-bottom: 0;
+}
+
+.InputGroup .pencil {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.2s ease-in-out;
+}
+
+.InputGroup label {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.InputGroup input {
+  width: 90%;
+  background: transparent;
+  border-style: none;
+  color: var(--white);
+}
+
+.InputGroup input::placeholder {
+  color: #c3c3c3;
+}
+
+.InputGroup input:focus {
+  outline: none;
+}
+
+.InputGroup input:focus + .pencil {
+  transform: scale(1);
+  opacity: 1;
+}

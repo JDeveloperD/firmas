@@ -1,0 +1,45 @@
+.Button {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border-style: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.Button:active {
+  transform: scale(0.9);
+}
+
+/* Variations */
+
+.Button--outline-ligth {
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+.Button--outline-ligth:hover {
+  background: var(--white);
+  color: var(--dark-900);
+}
+
+.Button--dark {
+  background: var(--dark-900);
+  color: var(--white);
+}
+
+.Button--dark:hover {
+  background: var(--dark-800);
+}
+
+.Button--large {
+  font-size: 16px;
+  padding: 1rem 2rem;
+}
+
+.Button--with-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
